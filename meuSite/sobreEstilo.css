@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+.header {
+    background-color: #232323;
+    color: white;
+    overflow: auto;
+    border-bottom: 3px solid teal;
+    padding: 30px 0 30px 0;
+    /* height: 100px; */
+    /* padding-top: 10px; */
+    /* padding-bottom: 10px; */
+}
+
+.titulo {
+    margin: 0;
+    float: left;
+}
+
+.navbar {
+    list-style: none;
+    float: right;
+    cursor: pointer;
+}
+
+.navbar :hover {
+    color: white;
+    background-color: teal;
+    padding: 5px;
+}
+
+li {
+    float: left;
+    margin-left: 10px;
+    text-transform: uppercase;
+}
+
+/* modificar a cor do link */
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.destaque {
+    color: teal;
+}
+
+/* Enquadro */
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+/* Banner */
+
+.banner {
+    text-align: center;
+    background-image: url(imgs/montanha.jpg);
+    background-repeat: no-repeat;
+    background-color: grey;
+    background-size: cover;
+    height: 300px;
+}
+
+.banner h2 {
+    margin: 0;
+    font-size: 35px;
+    padding-top: 60px;
+}
+
+.banner h5 {
+    color: teal;
+}
+
+/* Icones */
+
+.banner img {
+    margin-right: 35px;
+    margin-top: 20px;
+    height: 60px;
+    cursor: pointer;
+}
+
+/* sobre */
+
+.sobre {
+    border-top: 2px solid teal;
+    overflow: auto;
+}
+
+.sobre h1 {
+    color: teal;
+}
+
+.sobre h3 {
+    color: teal;
+    margin-left: 50px;
+}
+
+.sobre img {
+    height: 60px;
+    /* float: right; */
+}
+
+.frase-item {
+    float: left;
+    text-align: center;
+    width: 40%;
+    padding: 3%;
+    /* margin: 2px; */
+    /* border: 2px solid teal ; */
+}
+
+.footer {
+    text-align: center;
+    background-color: teal;
+    height: 80px;
+}
+
+.footer h4 {
+    font-weight: 100;
+    padding-top: 30px;
+    color: white;
+}

@@ -6,34 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-
-    <link rel="stylesheet" href="estilo.css">
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0/dist/Chart.min.js"></script>
-
-    <style>
-        .ALLgrafico h1 {
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-            color: firebrick;
-        }
-
-        .meu-grafico {
-            width: 50%;
-            margin: auto;
-        }
-
-        .meu-graficoTwo {
-            width: 50%;
-            margin: auto;
-        }
-    </style>
-
+    <link rel="stylesheet" href="css/estilo.css">
 </head>
 
 <body>
-    <!-- cabeçalho -->
-
     <div class="header">
         <div class="container">
 
@@ -43,131 +19,31 @@
                 <li><a href="index.html">Home</span></li>
                 <li> <a href="sobre.html"> Sobre </a></li>
                 <li>Cadastro</li>
-                <li> </a><span class="destaque"> Login </span></li>
+                <li><a href="login.html"> <span class="destaque">Login</li>
             </ul>
         </div>
     </div>
 
-    <div class="banner">
+    <div class="pag-login">
         <div class="container">
+            <div class="box-login">
+                <h1>Acesse sua dashboard</h1>
 
-            <h1 class="destaque">
-                Nosso Gráfico Estatico
-            </h1>
+                <form action="">
+                    Usuário:
+                    <input type="text" name="login"> <br>
+                    Senha:
+                    <input type="password" name="password"> <br>
+                    <button> <a href="graficoEstatico.html">Entrar</a></button>
+                </form>
 
-            <h3>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
-                Maiores quasi ipsa dolorum ipsum quam omnis mollitia
-            </h3>
-
+            </div>
         </div>
     </div>
 
-    <div class="ALLgrafico">
 
-        <h1> Covid-19 - Global</h1>
 
-        <div style="float: left;" class="meu-grafico">
-            <canvas id="mychartOne" width="400" height="300"></canvas>
-        </div>
-
-        <div style="float: right;" class="meu-graficoTwo">
-            <canvas id="mychartTwo" width="400" height="300"></canvas>
-        </div>
-
-    </div>
-<!-- 
-    <div class="footer">
-        <div class="container">
-
-            <h4>
-                Feito com Amor por
-                <a href="https://github.com/FelipeAmorim720">
-                    um desenvolvedor BandTec!
-                </a>
-            </h4>
-        </div>
-    </div> -->
 
 </body>
 
 </html>
-
-<script>
-
-    var ctx = document.getElementById('mychartOne');
-
-    var graficoOne = new Chart(ctx, {
-        // tipo do grafico
-        type: 'horizontalBar',
-        // data = dados renderizados no gráfico:
-        data: {
-            labels: ["Janeiro", "Fevereiro", "Março", "Abril"],
-            // Datasets = grupos de dados 
-            datasets: [
-                // primerio dataset
-                {
-                    // Titulo da dataset
-                    label: "Casos de Covid-19 ",
-                    // dados, -lembrete de sequencia-
-                    data: [25000, 20000, 35000, 30000],
-                    // expessura da linha
-                    borderWidth: 10,
-                    borderColor: 'rgba(30, 144, 255)',
-                    backgroundColor: 'transparent',
-                },
-                // segundo dataset
-                {
-                    // outro tipo -- dataset
-                    type: 'horizontalBar',
-                    label: "Mortes por Covid-19",
-                    data: [8000, 7000, 11000, 9000],
-                    borderWidth: 10,
-                    borderColor: 'rgba(152, 251, 152)',
-                    backgroundColor: 'transparent',
-                }
-            ]
-        },
-        // OPTIONS = Opções globais
-        options: {
-            title: {
-                display: true,
-                fontSize: 20,
-                text: "Estatísticas 2021",
-                position: 'top',
-            },
-            legend: {
-                display: false,
-                reverse: true,
-                position: 'top'
-            },
-        }
-    });
-    // Outro grafico
-    var cttx = document.getElementById('mychartTwo');
-
-    var graficoTwo = new Chart(cttx, {
-        // tipo do grafico
-        type: 'pie',
-        data: {
-            labels: ["Recuperados", "Vacinados"],
-            datasets: [{
-                // label: "Curados e Vacinados",
-                backgroundColor: ["#836FFF", "#00CED1"],
-                data: [7750000, 22686106]
-            }]
-        },
-        // OPTIONS = opções globais
-        options: {
-            title: {
-                display: true,
-                fontSize: 20,
-                text: 'Recuperados e Vacinados',
-                position: 'top',
-            }
-        }
-    });
-
-    Chart.defaults.global.defaultFontColor = "#000080";
-
-</script>

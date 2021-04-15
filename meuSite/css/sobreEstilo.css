@@ -59,7 +59,7 @@ a {
 
 .banner {
     text-align: center;
-    background-image: url(imgs/montanha.jpg);
+    background-image: url(../imgs/montanha.jpg);
     background-repeat: no-repeat;
     background-color: grey;
     background-size: cover;
